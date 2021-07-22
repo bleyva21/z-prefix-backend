@@ -1,8 +1,10 @@
+// const connectionString = process.env.DATABASE_URL
+//ssl
 module.exports = {
 
     development: {
       client: 'pg',
-      connection: 'postgres://postgres:docker@localhost:5432/db'
+      connection: 'postgres://postgres:docker@localhost:5432/postgres'
     },
   
     staging: {
