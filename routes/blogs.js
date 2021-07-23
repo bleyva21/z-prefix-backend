@@ -47,4 +47,22 @@ router.delete('/', function(req, res) {
     );
 })
 
+router.patch('/', function (req, res) {
+  knex('blogs')
+    .where({id: req.body.id})
+    .update({
+      author: req.body.author,
+      title: req.body.title,
+      image: req.body.image,
+      text: req.body.text
+    })
+    .then(response => res.status(200).json({message: 'Success'}))
+    .catch(err =>
+      res.status(404).json({
+        message:
+          'Failed to post blog'
+      })
+    );
+})
+
 module.exports = router;
