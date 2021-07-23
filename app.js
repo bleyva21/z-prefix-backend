@@ -9,7 +9,7 @@ var blogsRouter = require('./routes/blogs');
 
 const app = express();
 
-app.use(cors({origin : 'http://localhost:3000', credentials: true }));
+app.use(cors({origin : 'https://leyva-z-prefix-frontend.herokuapp.com/', credentials: true }));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
